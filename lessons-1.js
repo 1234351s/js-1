@@ -18,7 +18,7 @@ let myNull = null;
 console.log(myNull);
 
 let userName = prompt("Введіть своє ім'я:");
-alert("Привіт, " + userName + "!");
+alert("Привіт, " + userName);
 
 let confirmation = confirm("Ви впевнені?");
 if (confirmation) {
