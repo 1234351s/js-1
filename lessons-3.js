@@ -8,17 +8,19 @@ const containsAtsimbol = email.includes("@");
 
 console.log(containsAtsimbol);
 
-const Lattery1 = "14";
+const Lattery1 = "My";
 
-const Lattery2 = "Arseniy";
+const Lattery2 = "Name";
 
 const Lattery3 = "Is";
 
-const fulllattery = Lattery1 + "14" + Lattery2 + "Arseniy" + Lattery3;
+const Lattery4 = Lattery1 + Lattery2 + Lattery3;
 
-const fulllattery += "Arseniy"
+const fulllatery = "Viktor";
 
 const Nameoleksandr = "Олександр";
 
-const cash = "300" ;
-alert(Дякуємо, Олександр до сплати 300 грн)
+const cash = "300";
+alert("Дякуємо, ${Nameoleksandr} До сплати ${cash} гривень");
+
+console.log(Lattery1);
