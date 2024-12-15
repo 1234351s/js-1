@@ -1,3 +1,4 @@
+/*
 const celsius = 30;
 
 const fahrenheit = (9 / 5) * celsius + 32;

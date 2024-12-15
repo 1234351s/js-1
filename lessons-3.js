@@ -1,6 +1,8 @@
-const result = 5 + 5 + 5;
+const result = 5 + 5 + "5";
 
 console.log(result);
+
+/* 2 завдання */
 
 const email = "zhelukarseniy@gmail.com";
 
@@ -8,19 +10,21 @@ const containsAtsimbol = email.includes("@");
 
 console.log(containsAtsimbol);
 
-const Lattery1 = "My";
+/* 3 завдання */
 
-const Lattery2 = "Name";
+const Lattery1 = "My ";
 
-const Lattery3 = "Is";
+const Lattery2 = "Name ";
 
-const Lattery4 = Lattery1 + Lattery2 + Lattery3;
+const Lattery3 = "Is ";
 
-const fulllatery = "Viktor";
+let fullname = Lattery1 + Lattery2 + Lattery3;
 
-const Nameoleksandr = "Олександр";
+fullname += " Victor";
 
-const cash = "300";
-alert("Дякуємо, ${Nameoleksandr} До сплати ${cash} гривень");
+console.log(fullname);
+/* 4 завдання */
 
-console.log(Lattery1);
+const uuserName = `Олександр`;
+const payment = 300;
+alert(`Дякуємо, ${uuserName} До сплати ${payment} гривен`);
