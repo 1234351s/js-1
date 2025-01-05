@@ -72,3 +72,5 @@ console.log(integerNumber);
 const stringifiedNumber = integerNumber.toString;
 
 console.log(stringifiedNumber);
+
+*/

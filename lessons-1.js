@@ -35,3 +35,4 @@ if (dangerousAction) {
 } else {
   alert("Дію відмінено!");
 }
+*/
