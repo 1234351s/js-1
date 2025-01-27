@@ -33,7 +33,7 @@ if (
 
 /* Завдання 3 */
 
-const monthNumber = 1; // замініть на потрібний номер місяця (1-12)
+const monthNumber = 1;
 
 if ([12, 1, 2].includes(monthNumber)) {
   console.log("Winter");
