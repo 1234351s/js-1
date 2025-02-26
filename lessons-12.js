@@ -12,16 +12,14 @@ const user = {
 };
 
 user.mood = "happy";
-
 user.hobby = "skydiving";
-
 user.premium = false;
 
 for (const key of Object.keys(user)) {
   console.log(`${key}:${user[key]}`);
 }
+
 // 2 завдання Напиши функцію countProps(obj), яка рахує кількість властивостей в об'єкті. Функція повертає число — кількість властивостей.
-// const countProps = function (obj)
 const countProps = function (obj) {
   return Object.keys(obj).length;
 };
@@ -29,8 +27,8 @@ const countProps = function (obj) {
 console.log(countProps({}));
 console.log(countProps({ name: "Mango", age: 2 }));
 console.log(countProps({ mail: "poly@mail.com", isOnline: true, score: 500 }));
+
 // 3 завдання Напиши функцію findBestEmployee(employees), яка приймає об'єкт співробітників і повертає ім'я найпродуктивнішого (який виконав більше всіх задач). Співробітники і кількість виконаних завдань містяться як властивості об'єкта в форматі "ім'я":"кількість задач".
-// const findBestEmployee = function (employees) {
 const findBestEmployee = function (employees) {
   let maxTasks = 0;
   let bestEmployee = "";
@@ -44,6 +42,7 @@ const findBestEmployee = function (employees) {
 
   return bestEmployee;
 };
+
 console.log(
   findBestEmployee({
     ann: 29,
@@ -61,8 +60,8 @@ console.log(
     chelsy: 38,
   })
 );
+
 // 4 завдання Напиши функцію countTotalSalary(employees) приймаючу об'єкт зарплат. Функція рахує загальну суму зарплати працівників і повертає її. Кожне поле об'єкта, переданого в функцію, має вигляд "ім'я":"зарплата".
-// const countTotalSalary = function (employees) {
 const countTotalSalary = function (employees) {
   let totalSalary = 0;
 
@@ -82,14 +81,7 @@ console.log(
   })
 );
 
-// 5 завдання  Напиши функцію getAllPropValues(arr, prop), яка отримує масив об'єктів і ім'я властивості. Повертає масив значень певної властивості prop з кожного об'єкта в масиві.
-// const products = [
-//   { name: 'Радар', price: 1300, quantity: 4 },
-//   { name: 'Сканер', price: 2700, quantity: 3 },
-//   { name: 'Дроїд', price: 400, quantity: 7 },
-//   { name: 'Захоплення', price: 1200, quantity: 2 },
-// ];
-// const getAllPropValues = function (arr, prop) {
+// 5 завдання Напиши функцію getAllPropValues(arr, prop), яка отримує масив об'єктів і ім'я властивості. Повертає масив значень певної властивості prop з кожного об'єкта в масиві.
 const getAllPropValues = function (arr, prop) {
   const values = [];
 
@@ -112,9 +104,8 @@ const products = [
 console.log(getAllPropValues(products, "name"));
 console.log(getAllPropValues(products, "quantity"));
 console.log(getAllPropValues(products, "category"));
-//   6 завдання Напиши функцію calculateTotalPrice(allProdcuts, productName), яка отримує масив об'єктів та ім'я продукту (значення властивості name). Повертає загальну вартість продукту (ціна * кількість).
-//   Викличи функції для перевірки працездатності твоєї реалізації.
-//   const calculateTotalPrice = function (allProdcuts, productName) {
+
+// 6 завдання Напиши функцію calculateTotalPrice(allProdcuts, productName), яка отримує масив об'єктів та ім'я продукту (значення властивості name). Повертає загальну вартість продукту (ціна * кількість).
 const calculateTotalPrice = function (allProducts, productName) {
   let totalPrice = 0;
 
@@ -128,12 +119,34 @@ const calculateTotalPrice = function (allProducts, productName) {
   return totalPrice;
 };
 
-const products = [
-  { name: "Радар", price: 1300, quantity: 4 },
-  { name: "Сканер", price: 2700, quantity: 3 },
-  { name: "Дроїд", price: 400, quantity: 7 },
-  { name: "Захоплення", price: 1200, quantity: 2 },
-];
-
 console.log(calculateTotalPrice(products, "Радар"));
 console.log(calculateTotalPrice(products, "Дроїд"));
+// 7 завдання
+const account = {
+  balance: 0,
+  transactionHistory: [],
+
+  getBalance() {
+    return this.balance;
+  },
+
+  addTransaction(amount, type) {
+    const transaction = { amount, type, date: new Date().toISOString() };
+    this.transactionHistory.push(transaction);
+    if (type === "deposit") {
+      this.balance += amount;
+    } else if (type === "withdrawal") {
+      this.balance -= amount;
+    }
+  },
+
+  getTransactionHistory() {
+    return this.transactionHistory;
+  },
+};
+
+account.addTransaction(500, "deposit");
+account.addTransaction(200, "withdrawal");
+
+console.log("Баланс:", account.getBalance());
+console.log("Історія транзакцій:", account.getTransactionHistory());

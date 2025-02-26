@@ -115,3 +115,112 @@
 // myObject.increaseAge(32)
 // myObject.changeOccupation("teacher")
 // console.log(myObject);
+
+// const car = {
+//   Make: "Toyota",
+//   model: "camry",
+//   year: 2020,
+//   features: ["power windows", "rear camera", "navigation"],
+//   safety: {
+//     artbags: true,
+//     antilock_brakes: true,
+//     stability_control: true,
+//   },
+// };
+// const { Make, model, year, features, safety } = car;
+
+// console.log(Make, model, year, features, safety);
+
+// Об’єкт user
+// const user = {
+//   name: "John",
+//   age: 30,
+//   email: "john@example.com",
+// };
+
+// const { name: username, age: userage = 20, email } = user;
+
+// console.log(username, userage, email);
+
+// Об’єкт books
+const books = {
+  count: 3,
+  list: [
+    {
+      title: "The Great Gatsby",
+      author: "F. Scott Fitzgerald",
+      year: 1925,
+    },
+    {
+      title: "To Kill a Mockingbird",
+      author: "Harper Lee",
+      year: 1960,
+    },
+    {
+      title: "1984",
+      author: "George Orwell",
+      year: 1949,
+    },
+  ],
+};
+const {
+  count,
+  list: [bookFitzgerald, bookLee, bookOrwell],
+} = books;
+const { title: booktitle, author: bookauthor, year: bookyear } = bookOrwell;
+console.log(bookFitzgerald);
+console.log(bookLee);
+console.log(bookOrwell);
+// // 1
+// // Напишіть функцію, яка отримує об'єкт
+// // з ім'ям, прізвищем та віком та використовує
+// // деструктуризацію для повернення рядка,
+// // що містить інформацію про цю людину в такому форматі:
+// //  "Мене звати Ім'я Прізвище і мені Вік років".
+// const person1 = {
+//   name: "Nelli",
+//   surname: "Laroy",
+//   age: 25,
+// };
+// function showPersonInfo(person) {
+//   const { name, surname, age } = person;
+//   return `Мене звати ${name} ${surname} і мені ${age}`;
+// }
+
+// showPersonInfo(person1);
+// console.log(showPersonInfo(person1));
+
+// const rgb = [200, 255, 100];
+
+// const [red, green, blue] = rgb;
+
+// console.log(`Red ${red},green ${green}, blue${blue}`);
+
+// const rgb = [200, 255, 100];
+
+// const [red, ...colors] = rgb;
+
+// console.log(`Red: ${red},Colors: ${colors}`);
+// Об’єкт movie
+// const movie = {
+//   title: "The Shawshank Redemption",
+//   director: {
+//     name: "Frank Darabont",
+//     nationality: "American",
+//   },
+//   actors: ["Tim Robbins", "Morgan Freeman"],
+//   release_year: 1994,
+//   ratings: {
+//     imdb: 9.3,
+//     rotten_tomatoes: 90,
+//   },
+// };
+// const {
+//   title,
+//   director: { name, nationality },
+//   actors: [actorsTim, actorsMorgan],
+//   release_year,
+//   ratings: { imdb },
+// } = movie;
+
+// console.log(actorsTim,actorsMorgan)
