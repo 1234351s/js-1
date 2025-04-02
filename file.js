@@ -224,3 +224,23 @@ console.log(bookOrwell);
 // } = movie;
 
 // console.log(actorsTim,actorsMorgan)
+const arrOfLinksName = ["Головна",'Про нас', "Відгуки", "Блог", "Контакти","Соцмережі"];
+let itemsArr = [];
+
+for (const item of arrOfLinksName) {
+  console.log(item);
+  const itemElement = document.createElement('li');
+  itemElement.classList.add('site-nav__item');
+
+  const linkElement = document.createElement('a');
+  linkElement.classList.add('site-nav__link');
+  linkElement.href = '#';
+  linkElement.textContent = item;
+
+  itemElement.appendChild(linkElement);
+    console.log(itemElement);
+    itemsArr.push(itemElement);
+}
+
+console.log(itemsArr);
+navListEl.append(...itemsArr);
